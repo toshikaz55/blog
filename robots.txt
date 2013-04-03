@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://toshikaz55.github.com/blog/sitemap.xml 

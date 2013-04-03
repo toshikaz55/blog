@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[toshikaz Blog]]></title>
+  <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
+  <link href="http://toshikaz55.github.com/blog/"/>
+  <updated>2013-04-03T19:43:50+09:00</updated>
+  <id>http://toshikaz55.github.com/blog/</id>
+  <author>
+    <name><![CDATA[toshikaz]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
