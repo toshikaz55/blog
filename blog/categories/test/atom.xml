@@ -4,7 +4,7 @@
   <title><![CDATA[Category: test | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/test/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-03T20:14:38+09:00</updated>
+  <updated>2013-04-03T20:15:29+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -18,8 +18,9 @@
     <link href="http://toshikaz55.github.com/blog/blog/2013/04/03/test-post/"/>
     <updated>2013-04-03T20:13:00+09:00</updated>
     <id>http://toshikaz55.github.com/blog/blog/2013/04/03/test-post</id>
-    <content type="html"><![CDATA[<p>test
-Hello Octopress blog World!</p>
+    <content type="html"><![CDATA[<p>test</p>
+
+<p>Hello Octopress blog World!</p>
 
 <p>テスト</p>
 ]]></content>
