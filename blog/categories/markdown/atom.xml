@@ -4,7 +4,7 @@
   <title><![CDATA[Category: markdown | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-04T10:38:35+09:00</updated>
+  <updated>2013-04-04T12:29:44+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -20,15 +20,15 @@
     <id>http://toshikaz55.github.com/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal</id>
     <content type="html"><![CDATA[<p><a href="http://octopress.org">Octopress</a>では</p>
 
-<blockquote><pre><code>% rake new_post\["title"\]
-</code></pre></blockquote>
+<pre><code>% rake new_post\["title"\]
+</code></pre>
 
 <p>このようにnew_postコマンドで、記事ごとにMarkdown形式でファイルを作成する。</p>
 
 <p>作成したMarkdown形式のファイルからHTMLファイルを生成し、サーバにデプロイすることで静的なブログ記事を投稿する。</p>
 
-<blockquote><pre><code>% rake gen_deploy
-</code></pre></blockquote>
+<pre><code>% rake gen_deploy
+</code></pre>
 
 <p>自動的にサーバにデプロイされてしまうので、デプロイ前にプレビューするコマンドもあるが、いちいちブラウザで開くのが面倒くさい。
 それに、以前からMarkdown形式のファイルを簡単に見ることができないかと思っていた。</p>
@@ -38,45 +38,44 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 
 <p>いずれにせよ、ターミナルから離れるのが面倒なので、markdownコマンドとテキストブラウザの<a href="http://lynx.browser.org/">lynx</a>でプレビューすることにした。</p>
 
-<blockquote><pre><code>% sudo brew install markdown
+<pre><code>% sudo brew install markdown
 % sudo brew install lynx
-</code></pre></blockquote>
+</code></pre>
 
 <p>これで、</p>
 
-<blockquote><pre><code>% markdown README.markdown | lynx -stdin
-</code></pre></blockquote>
+<pre><code>% markdown README.markdown | lynx -stdin
+</code></pre>
 
 <p>とすることで、ターミナル上でMarkdown形式のファイルを表示できることができる。</p>
 
 <p>せっかくなので、aliasを作成して、</p>
 
-<blockquote><pre><code>% mdview README.markdown
-</code></pre></blockquote>
+<pre><code>% mdview README.markdown
+</code></pre>
 
 <p>だけで、プレビュー表示できるようにしようとしたが、ここでちょっとつまづいた。</p>
 
 <p>zshではaliasの設定に引数を取れないので、</p>
 
-<blockquote><pre><code>% alias mdview="markdown $1 | lynx -stdin"
-</code></pre></blockquote>
+<pre><code>% alias mdview="markdown $1 | lynx -stdin"
+</code></pre>
 
 <p>とは書けない。そのような場合は関数を定義するらしい。
 .zshrcファイルに</p>
 
-<blockquote><pre><code>function mdview() {
+<pre><code>function mdview() {
          markdown $1 | lynx -stdin
 }
-</code></pre></blockquote>
+</code></pre>
 
 <p>と記述することで、</p>
 
-<blockquote><pre><code>% mdview README.markdown
-</code></pre></blockquote>
+<pre><code>% mdview README.markdown
+</code></pre>
 
-<p>とaliasのように使用することができた。</p>
-
-<p>関数名は mdless の方がよかったかな？まぁいいや。</p>
+<p>とaliasのように使用することができた。
+関数名は mdless の方がよかったかな？まぁいいや。</p>
 
 <p>これで楽になった。よかったよかった。</p>
 ]]></content>
