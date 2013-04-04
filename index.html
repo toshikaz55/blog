@@ -9,7 +9,7 @@
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="Octopressでは % rake new_post\["title"\] このようにnew_postコマンドで、記事ごとにMarkdown形式でファイルを作成する。 作成したMarkdown形式のファイルからHTMLファイルを生成し、サーバにデプロイすることで静的なブログ記事を投稿する。 % &hellip;">
+  <meta name="description" content="octopressで画像を貼るときは、Markdown形式 ![alt title](image URL) もしくは、公式ページのImage Tagにあるように &lt;img class="[class names]" src="/path/to/image" title="[width] [ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,77 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2013/04/04/octopress-image-dir/">Octopressで画像を貼るときのディレクトリ指定の仕方</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-04T14:28:00+09:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://octopress.org">octopress</a>で画像を貼るときは、Markdown形式</p>
+
+<pre><code>![alt title](image URL)
+</code></pre>
+
+<p>もしくは、公式ページの<a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a>にあるように</p>
+
+<pre><code>&lt;img class="[class names]" src="/blog/path/to/image" title="[width] [height] [title text [alt text]]" &gt;
+</code></pre>
+
+<p>このように書くことができます。</p>
+
+<p>ただし、画像の指定がわかりませんでした。
+どこのフォルダに置けば画像を相対パスで指定できるのでしょうか？</p>
+
+<p>色々と試してみました</p>
+
+<pre><code>![violin](http://toshikaz55.github.com/blog/images/violin.jpg)
+&lt;img src="http://toshikaz55.github.com/blog/images/violin.jpg"&gt;
+
+![violin](../../images/violin.jpg)
+![violin](violin.jpg)
+![violin](images/violin.jpg)
+
+![violin](/images/violin.jpg)
+![violin](/images/email.png)
+
+![violin](/blog/images/violin.jpg)
+</code></pre>
+
+<p>結果は、octopress/source/imagesディレクトリに画像を置いて、</p>
+
+<pre><code>![violin](/images/violin.jpg)
+</code></pre>
+
+<p>このように、指定することで、画像を表示できました。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -207,6 +278,8 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 
 <p><img src="/blog/images/violin.jpg" alt="violin" /></p>
 
+<p><img src="/blog/images/email.png" alt="violin" /></p>
+
 <p><img src="/blog/blog/images/violin.jpg" alt="violin" /></p>
 </div>
   
@@ -226,6 +299,10 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/blog/2013/04/04/octopress-image-dir/">octopressで画像を貼るときのディレクトリ指定の仕方</a>
+      </li>
     
       <li class="post">
         <a href="/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal/">markdown形式のファイルをターミナル上でプレビューする方法</a>

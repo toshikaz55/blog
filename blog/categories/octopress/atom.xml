@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | toshikaz Blog]]></title>
+  <link href="http://toshikaz55.github.com/blog/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://toshikaz55.github.com/blog/"/>
+  <updated>2013-04-04T14:39:32+09:00</updated>
+  <id>http://toshikaz55.github.com/blog/</id>
+  <author>
+    <name><![CDATA[toshikaz]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[octopressで画像を貼るときのディレクトリ指定の仕方]]></title>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/04/04/octopress-image-dir/"/>
+    <updated>2013-04-04T14:28:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/04/04/octopress-image-dir</id>
+    <content type="html"><![CDATA[<p><a href="http://octopress.org">octopress</a>で画像を貼るときは、Markdown形式</p>
+
+<pre><code>![alt title](image URL)
+</code></pre>
+
+<p>もしくは、公式ページの<a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a>にあるように</p>
+
+<pre><code><img class="[class names]" src="/path/to/image" title="[width] [height] [title text [alt text]]" >
+</code></pre>
+
+<p>このように書くことができます。</p>
+
+<p>ただし、画像の指定がわかりませんでした。
+どこのフォルダに置けば画像を相対パスで指定できるのでしょうか？</p>
+
+<p>色々と試してみました</p>
+
+<pre><code>![violin](http://toshikaz55.github.com/blog/images/violin.jpg)
+<img src="http://toshikaz55.github.com/blog/images/violin.jpg">
+
+![violin](../../images/violin.jpg)
+![violin](violin.jpg)
+![violin](images/violin.jpg)
+
+![violin](/images/violin.jpg)
+![violin](/images/email.png)
+
+![violin](/blog/images/violin.jpg)
+</code></pre>
+
+<p>結果は、octopress/source/imagesディレクトリに画像を置いて、</p>
+
+<pre><code>![violin](/images/violin.jpg)
+</code></pre>
+
+<p>このように、指定することで、画像を表示できました。</p>
+]]></content>
+  </entry>
+  
+</feed>
