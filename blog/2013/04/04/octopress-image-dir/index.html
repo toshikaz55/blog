@@ -9,7 +9,7 @@
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="octopressで画像を貼るときは、Markdown形式 ![alt title](image URL) もしくは、公式ページのImage Tagにあるように このように書くことができます。 ただし、画像ファイルのURLの指定がわかりませんでした。 &hellip;">
+  <meta name="description" content="octopressで画像を貼るときは、Markdown形式 ![alt title](image URL) もしくは、公式ページのImage Tagにあるように `&lt;img class="[class names]" src="/path/to/image" title="[width] [ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +97,9 @@
 </code></pre>
 
 <p>もしくは、公式ページの<a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a>にあるように</p>
+
+<pre><code>`&lt;img class="[class names]" src="/blog/path/to/image" title="[width] [height] [title text [alt text]]" &gt;`
+</code></pre>
 
 <p>このように書くことができます。</p>
 
