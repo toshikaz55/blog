@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-04T14:56:23+09:00</updated>
+  <updated>2013-04-04T14:57:34+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -59,7 +59,10 @@
 <pre><code>![violin](/images/violin.jpg)
 </code></pre>
 
-<p>このように、指定することで、画像を表示できました。</p>
+<p>このように、指定することで、画像を表示できました。
+<img src="/images/violin.jpg" alt="violin" /></p>
+
+<p>よかったよかった。</p>
 ]]></content>
   </entry>
   
