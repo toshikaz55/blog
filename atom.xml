@@ -4,7 +4,7 @@
   <title><![CDATA[toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-04T14:51:36+09:00</updated>
+  <updated>2013-04-04T14:53:20+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -36,7 +36,6 @@
 <p>色々と試してみました</p>
 
 <pre><code>![violin](http://toshikaz55.github.com/blog/images/violin.jpg)
-&lt;img src="http://toshikaz55.github.com/blog/images/violin.jpg"&gt;
 
 ![violin](../../images/violin.jpg)
 ![violin](violin.jpg)
@@ -49,6 +48,13 @@
 </code></pre>
 
 <p>結果は、octopress/source/imagesディレクトリに画像を置いて、</p>
+
+<p>絶対URL指定ならば</p>
+
+<pre><code>![violin](http://toshikaz55.github.com/blog/images/violin.jpg)
+</code></pre>
+
+<p>相対URL指定ならば</p>
 
 <pre><code>![violin](/images/violin.jpg)
 </code></pre>
