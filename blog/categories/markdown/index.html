@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>toshikaz Blog</title>
+  <title>Category: markdown - toshikaz Blog</title>
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="Octopressでは % rake new_post\["title"\] このようにnew_postコマンドで、記事ごとにMarkdown形式でファイルを作成する。 作成したMarkdown形式のファイルからHTMLファイルを生成し、サーバにデプロイすることで静的なブログ記事を投稿する。 % &hellip;">
+  <meta name="description" content="Category: markdown">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://toshikaz55.github.com/blog">
+  <link rel="canonical" href="http://toshikaz55.github.com/blogblog/categories/markdown">
   <link href="/blog/favicon.png" rel="icon">
   <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/blog/atom.xml" rel="alternate" title="toshikaz Blog" type="application/atom+xml">
@@ -63,151 +63,40 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal/">Markdown形式のファイルをターミナル上でプレビューする方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-04T10:11:00+09:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Markdown</h1>
     
   </header>
+  
+  <div id="blog-archives" class="category">
 
 
-  <div class="entry-content"><p><a href="http://octopress.org">Octopress</a>では</p>
 
-<blockquote><pre><code>% rake new_post\["title"\]
-</code></pre></blockquote>
+  
+  <h2>2013</h2>
 
-<p>このようにnew_postコマンドで、記事ごとにMarkdown形式でファイルを作成する。</p>
+<article>
+  
+<h1><a href="/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal/">markdown形式のファイルをターミナル上でプレビューする方法</a></h1>
+<time datetime="2013-04-04T10:11:00+09:00" pubdate><span class='month'>Apr</span> <span class='day'>04</span> <span class='year'>2013</span></time>
 
-<p>作成したMarkdown形式のファイルからHTMLファイルを生成し、サーバにデプロイすることで静的なブログ記事を投稿する。</p>
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/blog/categories/markdown/'>markdown</a></span>
+</footer>
 
-<blockquote><pre><code>% rake gen_deploy
-</code></pre></blockquote>
 
-<p>自動的にサーバにデプロイされてしまうので、デプロイ前にプレビューするコマンドもあるが、いちいちブラウザで開くのが面倒くさい。
-それに、以前からMarkdown形式のファイルを簡単に見ることができないかと思っていた。</p>
+</article>
 
-<p>最近はREADMEファイルがMarkdown形式であることも割りとあるが、README.markdownファイルを見るのに、一般的にはどうしているのだろうか？
-marukuコマンドでHTMLファイルを生成してブラウザでみてるのか、それともMarkdown形式対応のエディタで開いてるのだろうか…</p>
-
-<p>いずれにせよ、ターミナルから離れるのが面倒なので、markdownコマンドとテキストブラウザの<a href="http://lynx.browser.org/">lynx</a>でプレビューすることにした。</p>
-
-<blockquote><pre><code>% sudo brew install markdown
-% sudo brew install lynx
-</code></pre></blockquote>
-
-<p>これで、</p>
-
-<blockquote><pre><code>% markdown README.markdown | lynx -stdin
-</code></pre></blockquote>
-
-<p>とすることで、ターミナル上でMarkdown形式のファイルを表示できることができる。</p>
-
-<p>せっかくなので、aliasを作成して、</p>
-
-<blockquote><pre><code>% mdview README.markdown
-</code></pre>
-
-<p>だけで、プレビュー表示できるようにしようとしたが、ここでちょっとつまづいた。</p></blockquote>
-
-<p>zshではaliasの設定に引数を取れないので、</p>
-
-<blockquote><pre><code>% alias mdview="markdown $1 | lynx -stdin"
-</code></pre>
-
-<p>とは書けない。そのような場合は関数を定義するらしい。
-.zshrcファイルに</p>
-
-<pre><code>function mdview() {
-         markdown $1 | lynx -stdin
-}
-</code></pre></blockquote>
-
-<p>と記述することで、</p>
-
-<blockquote><pre><code>% mdview README.markdown
-</code></pre>
-
-<p>とaliasのように使用することができた。</p></blockquote>
-
-<p>関数名は mdless の方がよかったかな？まぁいいや。</p>
-
-<p>これで楽になった。よかったよかった。</p>
 </div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/03/test-post/">Test Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
 
   
+</article>
 
-
-<time datetime="2013-04-03T20:13:00+09:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>test</p>
-
-<p>Hello Octopress blog World!</p>
-
-<p>テスト</p>
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -228,7 +117,7 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/toshikaz55">@toshikaz55</a> on GitHub
@@ -260,6 +149,7 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 
   
 </aside>
+
 
     </div>
   </div>
