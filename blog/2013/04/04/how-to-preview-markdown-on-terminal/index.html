@@ -125,19 +125,19 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 <p>せっかくなので、aliasを作成して、</p>
 
 <blockquote><pre><code>% mdview README.markdown
-</code></pre>
+</code></pre></blockquote>
 
-<p>だけで、プレビュー表示できるようにしようとしたが、ここでちょっとつまづいた。</p></blockquote>
+<p>だけで、プレビュー表示できるようにしようとしたが、ここでちょっとつまづいた。</p>
 
 <p>zshではaliasの設定に引数を取れないので、</p>
 
 <blockquote><pre><code>% alias mdview="markdown $1 | lynx -stdin"
-</code></pre>
+</code></pre></blockquote>
 
 <p>とは書けない。そのような場合は関数を定義するらしい。
 .zshrcファイルに</p>
 
-<pre><code>function mdview() {
+<blockquote><pre><code>function mdview() {
          markdown $1 | lynx -stdin
 }
 </code></pre></blockquote>
@@ -145,9 +145,9 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 <p>と記述することで、</p>
 
 <blockquote><pre><code>% mdview README.markdown
-</code></pre>
+</code></pre></blockquote>
 
-<p>とaliasのように使用することができた。</p></blockquote>
+<p>とaliasのように使用することができた。</p>
 
 <p>関数名は mdless の方がよかったかな？まぁいいや。</p>
 
