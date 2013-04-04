@@ -4,7 +4,7 @@
   <title><![CDATA[toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-04T13:27:05+09:00</updated>
+  <updated>2013-04-04T13:40:22+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -99,6 +99,8 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 <p><img src="../../images/violin.jpg" alt="violin" /></p>
 
 <p><img src="violin.jpg" alt="violin" /></p>
+
+<p><img src="images/violin.jpg" alt="violin" /></p>
 ]]></content>
   </entry>
   
