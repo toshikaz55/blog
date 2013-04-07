@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-07T16:41:09+09:00</updated>
+  <updated>2013-04-07T16:42:03+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -23,8 +23,10 @@
 <pre><code>![alt title](image URL)
 </code></pre>
 
-<p>もしくは、公式ページの<a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a>にあるように
-<code><img class="[class names]" src="/path/to/image" title="[width] [height] [title text [alt text]]" ></code></p>
+<p>もしくは、公式ページの<a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a>にあるように</p>
+
+<pre><code>{ % img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+</code></pre>
 
 <p>このように書くことができます。（※実際には先頭の％の前のスペースは不要）</p>
 
