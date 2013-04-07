@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>toshikaz Blog</title>
+  <title>octopressのプラグインのテスト - toshikaz Blog</title>
   <meta name="author" content="toshikaz">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://toshikaz55.github.com/blog">
+  <link rel="canonical" href="http://toshikaz55.github.com/blog/blog/2013/04/07/octopress-plugin">
   <link href="/blog/favicon.png" rel="icon">
   <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/blog/atom.xml" rel="alternate" title="toshikaz Blog" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/07/octopress-plugin/">Octopressのプラグインのテスト</a></h1>
+      <h1 class="entry-title">Octopressのプラグインのテスト</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="http://octopress.org">octopress</a>にはまだ数はあまり多くないですが、色々なサードパーティプラグインがあります。</p>
+<div class="entry-content"><p><a href="http://octopress.org">octopress</a>にはまだ数はあまり多くないですが、色々なサードパーティプラグインがあります。</p>
 
 <p>以下のプラグインをインストールしてみました</p>
 
@@ -139,102 +136,16 @@
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/04/octopress-image-dir/">Octopressで画像を貼るときのディレクトリ指定の仕方</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">toshikaz</span></span>
 
-<time datetime="2013-04-04T14:28:00+09:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://octopress.org">octopress</a>で画像を貼るときは、Markdown形式</p>
-
-<pre><code>![alt title](image URL)
-</code></pre>
-
-<p>もしくは、公式ページの<a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a>にあるように</p>
-
-<pre><code>{ % img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-</code></pre>
-
-<p>このように書くことができます。（※実際には先頭の％の前のスペースは不要）</p>
-
-<p>ただし、画像ファイルのURLの指定がわかりませんでした。
-どこのフォルダに置けば画像を相対パスで指定できるのでしょうか？</p>
-
-<p>色々と試してみました</p>
-
-<pre><code>![violin](http://toshikaz55.github.com/blog/images/violin.jpg)
-
-![violin](../../images/violin.jpg)
-![violin](violin.jpg)
-![violin](images/violin.jpg)
-
-![violin](/images/violin.jpg)
-
-![violin](/blog/images/violin.jpg)
-</code></pre>
-
-<p>結果は、octopress/source/imagesディレクトリに画像を置いて、</p>
-
-<p>絶対URL指定ならば</p>
-
-<pre><code>![violin](http://toshikaz55.github.com/blog/images/violin.jpg)
-</code></pre>
-
-<p>相対URL指定ならば</p>
-
-<pre><code>![violin](/images/violin.jpg)
-</code></pre>
-
-<p>このように、指定することで、画像を表示できました。</p>
-
-<p><img src="/blog/images/violin.jpg" alt="violin" /></p>
-
-<p>よかったよかった。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal/">Markdown形式のファイルをターミナル上でプレビューする方法</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -246,142 +157,49 @@
   
 
 
-<time datetime="2013-04-04T10:11:00+09:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://octopress.org">Octopress</a>では</p>
-
-<pre><code>% rake new_post\["title"\]
-</code></pre>
-
-<p>このようにnew_postコマンドで、記事ごとにMarkdown形式でファイルを作成する。</p>
-
-<p>作成したMarkdown形式のファイルからHTMLファイルを生成し、サーバにデプロイすることで静的なブログ記事を投稿する。</p>
-
-<pre><code>% rake gen_deploy
-</code></pre>
-
-<p>自動的にサーバにデプロイされてしまうので、デプロイ前にプレビューするコマンドもあるが、いちいちブラウザで開くのが面倒くさい。
-それに、以前からMarkdown形式のファイルを簡単に見ることができないかと思っていた。</p>
-
-<p>最近はREADMEファイルがMarkdown形式であることも割りとあるが、README.markdownファイルを見るのに、一般的にはどうしているのだろうか？
-marukuコマンドでHTMLファイルを生成してブラウザでみてるのか、それともMarkdown形式対応のエディタで開いてるのだろうか…</p>
-
-<p>いずれにせよ、ターミナルから離れるのが面倒なので、markdownコマンドとテキストブラウザの<a href="http://lynx.browser.org/">lynx</a>でプレビューすることにした。</p>
-
-<pre><code>% sudo brew install markdown
-% sudo brew install lynx
-</code></pre>
-
-<p>これで、</p>
-
-<pre><code>% markdown README.markdown | lynx -stdin
-</code></pre>
-
-<p>とすることで、ターミナル上でMarkdown形式のファイルを表示できることができる。</p>
-
-<p>せっかくなので、aliasを作成して、</p>
-
-<pre><code>% mdview README.markdown
-</code></pre>
-
-<p>だけで、プレビュー表示できるようにしようとしたが、ここでちょっとつまづいた。</p>
-
-<p>zshではaliasの設定に引数を取れないので、</p>
-
-<pre><code>% alias mdview="markdown $1 | lynx -stdin"
-</code></pre>
-
-<p>とは書けない。そのような場合は関数を定義するらしい。
-.zshrcファイルに</p>
-
-<pre><code>function mdview() {
-         markdown $1 | lynx -stdin
-}
-</code></pre>
-
-<p>と記述することで、</p>
-
-<pre><code>% mdview README.markdown
-</code></pre>
-
-<p>とaliasのように使用することができた。
-関数名は mdless の方がよかったかな？まぁいいや。</p>
-
-<p>これで楽になった。よかったよかった。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2013-04-07T16:43:00+09:00" pubdate data-updated="true">Apr 7<span>th</span>, 2013</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/03/test-post/">Test Post</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/blog/categories/octopress/'>octopress</a>
+  
+</span>
 
 
-<time datetime="2013-04-03T20:13:00+09:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
-        
-      </p>
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>test</p>
-
-<p>Hello Octopress Blog World!</p>
-
-<p>テスト</p>
-
-<p><img src="http://toshikaz55.github.com/blog/images/violin.jpg" alt="violin" /></p>
-
-<p><img src="http://toshikaz55.github.com/blog/images/violin.jpg"></p>
-
-<p><img src="../../images/violin.jpg" alt="violin" /></p>
-
-<p><img src="violin.jpg" alt="violin" /></p>
-
-<p><img src="images/violin.jpg" alt="violin" /></p>
-
-<p><img src="/blog/images/violin.jpg" alt="violin" /></p>
-
-<p><img src="/blog/images/email.png" alt="violin" /></p>
-
-<p><img src="/blog/blog/images/violin.jpg" alt="violin" /></p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://toshikaz55.github.com/blog/blog/2013/04/07/octopress-plugin/" data-via="toshikaz55" data-counturl="http://toshikaz55.github.com/blog/blog/2013/04/07/octopress-plugin/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    
+      <div class="related_posts">
+<h1>Related Posts</h1>
+<ul>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/blog/archives">Blog Archives</a>
-    
-  </div>
+</ul>
 </div>
+
+     
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/blog/2013/04/04/octopress-image-dir/" title="Previous Post: octopressで画像を貼るときのディレクトリ指定の仕方">&laquo; octopressで画像を貼るときのディレクトリ指定の仕方</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -414,7 +232,7 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/toshikaz55">@toshikaz55</a> on GitHub
@@ -443,6 +261,7 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 
   
 </aside>
+
 
     </div>
   </div>

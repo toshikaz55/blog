@@ -4,7 +4,7 @@
   <title><![CDATA[toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-07T16:42:03+09:00</updated>
+  <updated>2013-04-07T17:02:02+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[octopressのプラグインのテスト]]></title>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/04/07/octopress-plugin/"/>
+    <updated>2013-04-07T16:43:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/04/07/octopress-plugin</id>
+    <content type="html"><![CDATA[<p><a href="http://octopress.org">octopress</a>にはまだ数はあまり多くないですが、色々なサードパーティプラグインがあります。</p>
+
+<p>以下のプラグインをインストールしてみました</p>
+
+<ul>
+<li><a href="https://github.com/scottwb/jekyll-tweet-tag">jekyll-tweet-tag</a>
+
+<ul>
+<li>Twitterのつぶやきを埋め込む簡単にプラグイン</li>
+</ul>
+</li>
+<li><a href="https://github.com/futoase/Octopress-Nicovideo-Plugin">Nicovideo</a>
+
+<ul>
+<li>ニコニコ動画を簡単に埋め込むプラグイン</li>
+</ul>
+</li>
+<li><a href="https://github.com/mguentner/octolayer">octolayer</a>
+
+<ul>
+<li>OpenStreetMapの地図を埋め込むプラグイン</li>
+</ul>
+</li>
+</ul>
+
+
+<p>それぞれこんな感じ</p>
+
+<pre><code>{ % tweet twitterURL %}
+</code></pre>
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="ja"><p>昨日作ったブログに記事を書いた。 &#8220;markdown形式のファイルをターミナル上でプレビューする方法 - toshikaz Blog&#8221; <a href="http://t.co/3QmdotMdiG" title="http://toshikaz55.github.com/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal/">toshikaz55.github.com/blog/blog/2013…</a> @<a href="https://twitter.com/toshikaz55">toshikaz55</a>さんから</p>&mdash; toshikazさん (@toshikaz55) <a href="https://twitter.com/toshikaz55/status/319625587167752192">2013年4月4日</a></blockquote>
+<script async src="http://toshikaz55.github.com/blog//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>好きなニコマス動画も簡単に埋め込める</p>
+
+<pre><code>{ % nicovideo smVideoID %}
+</code></pre>
+
+<div style="margin-left: auto; margin-right: auto; width: 500px;"><script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm17261264  "></script><noscript><a href="http://www.nicovideo.jp/watch/sm17261264  ">アイドルマスター　「TORIIIIIICO!」 KICK THE CAN CREW</a></noscript></div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[octopressで画像を貼るときのディレクトリ指定の仕方]]></title>
