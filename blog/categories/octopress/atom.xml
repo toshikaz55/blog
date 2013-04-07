@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-07T17:53:35+09:00</updated>
+  <updated>2013-04-07T17:54:43+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -64,9 +64,7 @@
 <pre><code>{ % map 34.68736 135.52584 15 "大阪城" "ここが大阪城" %}
 </code></pre>
 
-<p><div class='map'><div style='height:420px' id='map3'></div><div class='mapCaption'>Map Data: <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors <a href='http://www.openstreetmap.org/copyright'>License</a> - Tiles Courtesy of <a href='http://www.mapquest.com/' target='_blank'>MapQuest</a><img src='http://developer.mapquest.com/content/osm/mq_logo.png'></div></div><script type='text/javascript'>jQuery(document).ready(function() {initmap('map3',34.68736,135.52584,15,'大阪城','ここが大阪城');});</script></p>
-
-<p><div class='map'><div style='height:420px' id='map4'></div><div class='mapCaption'>Map Data: <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors <a href='http://www.openstreetmap.org/copyright'>License</a> - Tiles Courtesy of <a href='http://www.mapquest.com/' target='_blank'>MapQuest</a><img src='http://developer.mapquest.com/content/osm/mq_logo.png'></div></div><script type='text/javascript'>jQuery(document).ready(function() {initmap('map4',52.5186,13.408056,12,'We\'ll meet here','It\'s a nice place');});</script></p>
+<p><div class='map'><div style='height:420px' id='map2'></div><div class='mapCaption'>Map Data: <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors <a href='http://www.openstreetmap.org/copyright'>License</a> - Tiles Courtesy of <a href='http://www.mapquest.com/' target='_blank'>MapQuest</a><img src='http://developer.mapquest.com/content/osm/mq_logo.png'></div></div><script type='text/javascript'>jQuery(document).ready(function() {initmap('map2',34.68736,135.52584,15,'大阪城','ここが大阪城');});</script></p>
 
 <p>他にも色々プラグインがあるようなので、よさそうだったら使ってみよう。</p>
 
