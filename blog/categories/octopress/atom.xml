@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-04-07T17:54:43+09:00</updated>
+  <updated>2013-04-07T17:56:25+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -49,7 +49,7 @@
 <pre><code>{ % tweet twitterURL %}
 </code></pre>
 
-<p><div class='embed tweet'><blockquote class="twitter-tweet" lang="ja"><p>昨日作ったブログに記事を書いた。 "markdown形式のファイルをターミナル上でプレビューする方法 - toshikaz Blog" <a href="http://t.co/3QmdotMdiG" title="http://toshikaz55.github.com/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal/">toshikaz55.github.com/blog/blog/2013…</a> @<a href="https://twitter.com/toshikaz55">toshikaz55</a>さんから</p>&mdash; toshikazさん (@toshikaz55) <a href="https://twitter.com/toshikaz55/status/319625587167752192">2013年4月4日</a></blockquote>
+<p><div class='embed tweet'><blockquote class="twitter-tweet" lang="ja"><p>octopressのプラグインのテスト - toshikaz Blog <a href="http://t.co/H2XoQtfuML" title="http://toshikaz55.github.com/blog/blog/2013/04/07/octopress-plugin/">toshikaz55.github.com/blog/blog/2013…</a> @<a href="https://twitter.com/toshikaz55">toshikaz55</a>さんから</p>&mdash; toshikazさん (@toshikaz55) <a href="https://twitter.com/toshikaz55/status/320822123658625024">2013年4月7日</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div></p>
 
 <p>好きなニコマス動画も簡単に埋め込める</p>
