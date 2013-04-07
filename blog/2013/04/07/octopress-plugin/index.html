@@ -117,7 +117,7 @@
 </ul>
 
 
-<p>それぞれこんな感じ</p>
+<p>それぞれこんな感じ ( 冒頭の%記号の前のスペースは実際には取り除く )</p>
 
 <pre><code>{ % tweet twitterURL %}
 </code></pre>
@@ -134,7 +134,20 @@
 <div style="margin-left: auto; margin-right: auto; width: 500px;"><script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm17261264  "></script><noscript><a href="http://www.nicovideo.jp/watch/sm17261264  ">アイドルマスター　「TORIIIIIICO!」 KICK THE CAN CREW</a></noscript></div>
 
 
+<p>OpenStreetの地図を埋め込むのは、緯度、経度、ズーム情報を書くのでちょっと面倒かなぁ</p>
 
+<pre><code>{ % map 34.68736 135.52584 15 "大阪城" "ここが大阪城" %}
+</code></pre>
+
+<div class='map'><div style='height:420px' id='map1'></div><div class='mapCaption'>Map Data: <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors <a href='http://www.openstreetmap.org/copyright'>License</a> - Tiles Courtesy of <a href='http://www.mapquest.com/' target='_blank'>MapQuest</a><img src='http://developer.mapquest.com/content/osm/mq_logo.png'></div></div>
+
+
+<script type='text/javascript'>jQuery(document).ready(function() {initmap('map1',34.68736,135.52584,15,'大阪城','ここが大阪城');});</script>
+
+
+<p>他にも色々プラグインがあるようなので、よさそうだったら使ってみよう。</p>
+
+<p>そんな感じ</p>
 </div>
 
 
