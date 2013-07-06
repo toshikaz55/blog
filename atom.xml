@@ -4,7 +4,7 @@
   <title><![CDATA[toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-07-07T08:26:57+09:00</updated>
+  <updated>2013-07-07T08:31:27+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[emacs上でTwitterのTLを表示する]]></title>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/06/13/twitter-on-emacs/"/>
+    <updated>2013-06-13T14:29:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/06/13/twitter-on-emacs</id>
+    <content type="html"><![CDATA[<p>小ネタ
+emacsにTwitterのTLを表示する方法について</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Chef-solo、日本語が含まれる（非US-ASCII）テンプレートでエラーが出る問題について]]></title>
