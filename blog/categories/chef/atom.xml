@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: chef | toshikaz Blog]]></title>
+  <link href="http://toshikaz55.github.com/blog/blog/categories/chef/atom.xml" rel="self"/>
+  <link href="http://toshikaz55.github.com/blog/"/>
+  <updated>2013-07-07T08:15:16+09:00</updated>
+  <id>http://toshikaz55.github.com/blog/</id>
+  <author>
+    <name><![CDATA[toshikaz]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Chef-solo、vagrantのインストールとknifeを使った各種あオフとのインストールと設定の自動化]]></title>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/06/02/chef-solo%2C-vagrantfalseinsutorutoknifewoshi-tutage-zhong-aohutofalseinsutorutoshe-ding-falsezi-dong-hua/"/>
+    <updated>2013-06-02T15:40:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/06/02/chef-solo,-vagrantfalseinsutorutoknifewoshi-tutage-zhong-aohutofalseinsutorutoshe-ding-falsezi-dong-hua</id>
+    <content type="html"><![CDATA[<p>Chefのインストールなどについてあとで書く
+分量が多いのでどうしたものか…</p>
+]]></content>
+  </entry>
+  
+</feed>
