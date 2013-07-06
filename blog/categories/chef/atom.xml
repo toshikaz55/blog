@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chef | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/chef/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-07-07T08:15:16+09:00</updated>
+  <updated>2013-07-07T08:16:12+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Chef-solo、vagrantのインストールとknifeを使った各種あオフとのインストールと設定の自動化]]></title>
+    <title type="html"><![CDATA[Chef-solo、vagrantのインストールとknifeを使った各種ソフトのインストールと設定の自動化]]></title>
     <link href="http://toshikaz55.github.com/blog/blog/2013/06/02/chef-solo%2C-vagrantfalseinsutorutoknifewoshi-tutage-zhong-aohutofalseinsutorutoshe-ding-falsezi-dong-hua/"/>
     <updated>2013-06-02T15:40:00+09:00</updated>
     <id>http://toshikaz55.github.com/blog/blog/2013/06/02/chef-solo,-vagrantfalseinsutorutoknifewoshi-tutage-zhong-aohutofalseinsutorutoshe-ding-falsezi-dong-hua</id>
