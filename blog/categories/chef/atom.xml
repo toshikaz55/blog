@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chef | toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/blog/categories/chef/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-07-07T08:16:12+09:00</updated>
+  <updated>2013-07-07T08:21:01+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Chef-solo、日本語が含まれる（非US-ASCII）テンプレートでエラーが出る問題について]]></title>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo%2C-ri-ben-yu-gahan-mareru%28fei-us-ascii%29tenpuretodeeragachu-ruwen-ti-nituite/"/>
+    <updated>2013-06-06T08:20:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo,-ri-ben-yu-gahan-mareru(fei-us-ascii)tenpuretodeeragachu-ruwen-ti-nituite</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Chef-solo、vagrantのインストールとknifeを使った各種ソフトのインストールと設定の自動化]]></title>
