@@ -9,8 +9,7 @@
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="仮想CentOS6環境にgitlabをインストールしたことを書く
-">
+  <meta name="description" content="ruby1.8系だと動かないのはわかっていたけど、1.9.3を入れたし…と思っていたら、/etc/rc.d/init.d/function が、/usr/bin/をPATHの頭に設定してて、init.dの中のファイルのほうで、PATHを引き継いで、その後に/usr/local/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +85,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2013/06/21/webrick-puma-old-ruby-path/">Webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-21T08:57:00+09:00" pubdate data-updated="true">Jun 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ruby1.8系だと動かないのはわかっていたけど、1.9.3を入れたし…と思っていたら、/etc/rc.d/init.d/function が、/usr/bin/をPATHの頭に設定してて、init.dの中のファイルのほうで、PATHを引き継いで、その後に/usr/local/binを追加してたので、/usr/bin/rubyが優先されていたことについて書く</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -620,6 +655,10 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/blog/2013/06/21/webrick-puma-old-ruby-path/">webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/blog/2013/06/18/gitlab/">gitlabのインストール</a>
       </li>
     
@@ -633,10 +672,6 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
     
       <li class="post">
         <a href="/blog/blog/2013/06/02/chef-solo-vagrant-install/">Chef-solo、vagrantのインストールとknifeを使った各種ソフトのインストールと設定の自動化</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/blog/2013/04/24/pebble-smart-watche/">Pebble Smart Watche</a>
       </li>
     
   </ul>

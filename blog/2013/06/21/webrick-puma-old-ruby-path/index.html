@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Chef-solo、日本語が含まれる（非US-ASCII）テンプレートでエラーが出る問題について - toshikaz Blog</title>
+  <title>webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて - toshikaz Blog</title>
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="テンプレートで .emacs.d/init.el や、 .zshrc などを設置する際に、そのテンプレート内に日本語、（非US-ASCII）が含まれているとエラーが発生してしまう問題について書く
-">
+  <meta name="description" content="ruby1.8系だと動かないのはわかっていたけど、1.9.3を入れたし…と思っていたら、/etc/rc.d/init.d/function が、/usr/bin/をPATHの頭に設定してて、init.dの中のファイルのほうで、PATHを引き継いで、その後に/usr/local/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem">
+  <link rel="canonical" href="http://toshikaz55.github.com/blog/blog/2013/06/21/webrick-puma-old-ruby-path">
   <link href="/blog/favicon.png" rel="icon">
   <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/blog/atom.xml" rel="alternate" title="toshikaz Blog" type="application/atom+xml">
@@ -89,7 +88,7 @@
   
   <header>
     
-      <h1 class="entry-title">Chef-solo、日本語が含まれる（非US-ASCII）テンプレートでエラーが出る問題について</h1>
+      <h1 class="entry-title">Webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて</h1>
     
     
       <p class="meta">
@@ -105,14 +104,14 @@
   
 
 
-<time datetime="2013-06-06T08:20:00+09:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
+<time datetime="2013-06-21T08:57:00+09:00" pubdate data-updated="true">Jun 21<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>テンプレートで .emacs.d/init.el や、 .zshrc などを設置する際に、そのテンプレート内に日本語、（非US-ASCII）が含まれているとエラーが発生してしまう問題について書く</p>
+<div class="entry-content"><p>ruby1.8系だと動かないのはわかっていたけど、1.9.3を入れたし…と思っていたら、/etc/rc.d/init.d/function が、/usr/bin/をPATHの頭に設定してて、init.dの中のファイルのほうで、PATHを引き継いで、その後に/usr/local/binを追加してたので、/usr/bin/rubyが優先されていたことについて書く</p>
 </div>
 
 
@@ -135,21 +134,15 @@
   
 
 
-<time datetime="2013-06-06T08:20:00+09:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
+<time datetime="2013-06-21T08:57:00+09:00" pubdate data-updated="true">Jun 21<span>st</span>, 2013</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/blog/categories/chef/'>chef</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem/" data-via="toshikaz55" data-counturl="http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://toshikaz55.github.com/blog/blog/2013/06/21/webrick-puma-old-ruby-path/" data-via="toshikaz55" data-counturl="http://toshikaz55.github.com/blog/blog/2013/06/21/webrick-puma-old-ruby-path/" >Tweet</a>
   
   
   
@@ -170,10 +163,8 @@
      
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/blog/2013/06/02/chef-solo-vagrant-install/" title="Previous Post: Chef-solo、vagrantのインストールとknifeを使った各種ソフトのインストールと設定の自動化">&laquo; Chef-solo、vagrantのインストールとknifeを使った各種ソフトのインストールと設定の自動化</a>
+        <a class="basic-alignment left" href="/blog/blog/2013/06/18/gitlab/" title="Previous Post: gitlabのインストール">&laquo; gitlabのインストール</a>
       
-      
-        <a class="basic-alignment right" href="/blog/blog/2013/06/13/twitter-on-emacs/" title="Next Post: emacs上でTwitterのTLを表示する">emacs上でTwitterのTLを表示する &raquo;</a>
       
     </p>
   </footer>
@@ -269,8 +260,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem/';
-        var disqus_url = 'http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem/';
+        var disqus_identifier = 'http://toshikaz55.github.com/blog/blog/2013/06/21/webrick-puma-old-ruby-path/';
+        var disqus_url = 'http://toshikaz55.github.com/blog/blog/2013/06/21/webrick-puma-old-ruby-path/';
         var disqus_script = 'embed.js';
       
     (function () {
