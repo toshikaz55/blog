@@ -4,7 +4,7 @@
   <title><![CDATA[toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-07-07T08:21:01+09:00</updated>
+  <updated>2013-07-07T08:23:33+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -18,7 +18,7 @@
     <link href="http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo%2C-ri-ben-yu-gahan-mareru%28fei-us-ascii%29tenpuretodeeragachu-ruwen-ti-nituite/"/>
     <updated>2013-06-06T08:20:00+09:00</updated>
     <id>http://toshikaz55.github.com/blog/blog/2013/06/06/chef-solo,-ri-ben-yu-gahan-mareru(fei-us-ascii)tenpuretodeeragachu-ruwen-ti-nituite</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>テンプレートで .emacs.d/init.el や、 .zshrc などを設置する際に、そのテンプレート内に日本語、（非US-ASCII）が含まれているとエラーが発生してしまう問題について書く</p>
 ]]></content>
   </entry>
   
