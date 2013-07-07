@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた - toshikaz Blog</title>
+  <title>sshfsでAWSのEC2の自分のホームをローカルマシンのディレクトリにマウントした - toshikaz Blog</title>
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="EC2からみてみると256TBものストレージとしてマウントされてて、凄さを感じる
+  <meta name="description" content="普通にsshでEC2に接続するのと違って、ローカルにマウントすると、sublime textからでも簡単にフォルダー構造ごと参照できて便利。
 あとで書く
 ">
   
@@ -20,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs">
+  <link rel="canonical" href="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs">
   <link href="/blog/favicon.png" rel="icon">
   <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/blog/atom.xml" rel="alternate" title="toshikaz Blog" type="application/atom+xml">
@@ -89,7 +89,7 @@
   
   <header>
     
-      <h1 class="entry-title">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</h1>
+      <h1 class="entry-title">sshfsでAWSのEC2の自分のホームをローカルマシンのディレクトリにマウントした</h1>
     
     
       <p class="meta">
@@ -105,14 +105,14 @@
   
 
 
-<time datetime="2013-07-07T09:48:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+<time datetime="2013-07-07T09:51:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>EC2からみてみると256TBものストレージとしてマウントされてて、凄さを感じる
+<div class="entry-content"><p>普通にsshでEC2に接続するのと違って、ローカルにマウントすると、sublime textからでも簡単にフォルダー構造ごと参照できて便利。
 あとで書く</p>
 </div>
 
@@ -136,7 +136,7 @@
   
 
 
-<time datetime="2013-07-07T09:48:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+<time datetime="2013-07-07T09:51:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
       
 
 
@@ -144,7 +144,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs/" data-via="toshikaz55" data-counturl="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/" data-via="toshikaz55" data-counturl="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/" >Tweet</a>
   
   
   
@@ -165,7 +165,7 @@
      
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/blog/2013/06/21/webrick-puma-old-ruby-path/" title="Previous Post: webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて">&laquo; webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて</a>
+        <a class="basic-alignment left" href="/blog/blog/2013/07/01/aws-s3-mount-s3fs/" title="Previous Post: AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた">&laquo; AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a>
       
       
     </p>
@@ -191,7 +191,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/blog/2013/07/07/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a>
+        <a href="/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/">sshfsでAWSのEC2の自分のホームをローカルマシンのディレクトリにマウントした</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/07/01/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a>
       </li>
     
       <li class="post">
@@ -204,10 +208,6 @@
     
       <li class="post">
         <a href="/blog/blog/2013/06/13/twitter-on-emacs/">emacs上でTwitterのTLを表示する</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem/">Chef-solo、日本語が含まれる（非US-ASCII）テンプレートでエラーが出る問題について</a>
       </li>
     
   </ul>
@@ -262,8 +262,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs/';
-        var disqus_url = 'http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs/';
+        var disqus_identifier = 'http://toshikaz55.github.com/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/';
+        var disqus_url = 'http://toshikaz55.github.com/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/';
         var disqus_script = 'embed.js';
       
     (function () {

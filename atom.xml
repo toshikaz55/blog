@@ -4,7 +4,7 @@
   <title><![CDATA[toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-07-07T09:49:37+09:00</updated>
+  <updated>2013-07-07T09:52:03+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -14,10 +14,20 @@
 
   
   <entry>
+    <title type="html"><![CDATA[sshfsでAWSのEC2の自分のホームをローカルマシンのディレクトリにマウントした]]></title>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/"/>
+    <updated>2013-07-07T09:51:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs</id>
+    <content type="html"><![CDATA[<p>普通にsshでEC2に接続するのと違って、ローカルにマウントすると、sublime textからでも簡単にフォルダー構造ごと参照できて便利。
+あとで書く</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた]]></title>
-    <link href="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs/"/>
-    <updated>2013-07-07T09:48:00+09:00</updated>
-    <id>http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs</id>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/07/01/aws-s3-mount-s3fs/"/>
+    <updated>2013-07-01T09:48:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/07/01/aws-s3-mount-s3fs</id>
     <content type="html"><![CDATA[<p>EC2からみてみると256TBものストレージとしてマウントされてて、凄さを感じる
 あとで書く</p>
 ]]></content>

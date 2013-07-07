@@ -9,7 +9,7 @@
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="EC2からみてみると256TBものストレージとしてマウントされてて、凄さを感じる
+  <meta name="description" content="普通にsshでEC2に接続するのと違って、ローカルにマウントすると、sublime textからでも簡単にフォルダー構造ごと参照できて便利。
 あとで書く
 ">
   
@@ -92,7 +92,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/blog/2013/07/07/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a></h1>
+      <h1 class="entry-title"><a href="/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/">sshfsでAWSのEC2の自分のホームをローカルマシンのディレクトリにマウントした</a></h1>
     
     
       <p class="meta">
@@ -108,7 +108,44 @@
   
 
 
-<time datetime="2013-07-07T09:48:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+<time datetime="2013-07-07T09:51:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>普通にsshでEC2に接続するのと違って、ローカルにマウントすると、sublime textからでも簡単にフォルダー構造ごと参照できて便利。
+あとで書く</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2013/07/01/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-01T09:48:00+09:00" pubdate data-updated="true">Jul 1<span>st</span>, 2013</time>
         
       </p>
     
@@ -525,101 +562,6 @@ emacsにTwitterのTLを表示する方法について</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/04/how-to-preview-markdown-on-terminal/">Markdown形式のファイルをターミナル上でプレビューする方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-04T10:11:00+09:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://octopress.org">Octopress</a>では</p>
-
-<pre><code>% rake new_post\["title"\]
-</code></pre>
-
-<p>このようにnew_postコマンドで、記事ごとにMarkdown形式でファイルを作成する。</p>
-
-<p>作成したMarkdown形式のファイルからHTMLファイルを生成し、サーバにデプロイすることで静的なブログ記事を投稿する。</p>
-
-<pre><code>% rake gen_deploy
-</code></pre>
-
-<p>自動的にサーバにデプロイされてしまうので、デプロイ前にプレビューするコマンドもあるが、いちいちブラウザで開くのが面倒くさい。
-それに、以前からMarkdown形式のファイルを簡単に見ることができないかと思っていた。</p>
-
-<p>最近はREADMEファイルがMarkdown形式であることも割りとあるが、README.markdownファイルを見るのに、一般的にはどうしているのだろうか？
-marukuコマンドでHTMLファイルを生成してブラウザでみてるのか、それともMarkdown形式対応のエディタで開いてるのだろうか…</p>
-
-<p>いずれにせよ、ターミナルから離れるのが面倒なので、markdownコマンドとテキストブラウザの<a href="http://lynx.browser.org/">lynx</a>でプレビューすることにした。</p>
-
-<pre><code>% sudo brew install markdown
-% sudo brew install lynx
-</code></pre>
-
-<p>これで、</p>
-
-<pre><code>% markdown README.markdown | lynx -stdin
-</code></pre>
-
-<p>とすることで、ターミナル上でMarkdown形式のファイルを表示できることができる。</p>
-
-<p>せっかくなので、aliasを作成して、</p>
-
-<pre><code>% mdview README.markdown
-</code></pre>
-
-<p>だけで、プレビュー表示できるようにしようとしたが、ここでちょっとつまづいた。</p>
-
-<p>zshではaliasの設定に引数を取れないので、</p>
-
-<pre><code>% alias mdview="markdown $1 | lynx -stdin"
-</code></pre>
-
-<p>とは書けない。そのような場合は関数を定義するらしい。
-.zshrcファイルに</p>
-
-<pre><code>function mdview() {
-         markdown $1 | lynx -stdin
-}
-</code></pre>
-
-<p>と記述することで、</p>
-
-<pre><code>% mdview README.markdown
-</code></pre>
-
-<p>とaliasのように使用することができた。
-関数名は mdless の方がよかったかな？まぁいいや。</p>
-
-<p>これで楽になった。よかったよかった。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/blog/page/2/">&larr; Older</a>
@@ -639,7 +581,11 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/blog/2013/07/07/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a>
+        <a href="/blog/blog/2013/07/07/aws-ec2-local-mount-sshfs/">sshfsでAWSのEC2の自分のホームをローカルマシンのディレクトリにマウントした</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/07/01/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a>
       </li>
     
       <li class="post">
@@ -652,10 +598,6 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
     
       <li class="post">
         <a href="/blog/blog/2013/06/13/twitter-on-emacs/">emacs上でTwitterのTLを表示する</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem/">Chef-solo、日本語が含まれる（非US-ASCII）テンプレートでエラーが出る問題について</a>
       </li>
     
   </ul>
