@@ -4,7 +4,7 @@
   <title><![CDATA[toshikaz Blog]]></title>
   <link href="http://toshikaz55.github.com/blog/atom.xml" rel="self"/>
   <link href="http://toshikaz55.github.com/blog/"/>
-  <updated>2013-07-07T09:41:54+09:00</updated>
+  <updated>2013-07-07T09:49:37+09:00</updated>
   <id>http://toshikaz55.github.com/blog/</id>
   <author>
     <name><![CDATA[toshikaz]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた]]></title>
+    <link href="http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs/"/>
+    <updated>2013-07-07T09:48:00+09:00</updated>
+    <id>http://toshikaz55.github.com/blog/blog/2013/07/07/aws-s3-mount-s3fs</id>
+    <content type="html"><![CDATA[<p>EC2からみてみると256TBものストレージとしてマウントされてて、凄さを感じる
+あとで書く</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて]]></title>

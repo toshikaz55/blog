@@ -9,7 +9,9 @@
   <meta name="author" content="toshikaz">
 
   
-  <meta name="description" content="ruby1.8系だと動かないのはわかっていたけど、1.9.3を入れたし…と思っていたら、/etc/rc.d/init.d/function が、/usr/bin/をPATHの頭に設定してて、init.dの中のファイルのほうで、PATHを引き継いで、その後に/usr/local/ &hellip;">
+  <meta name="description" content="EC2からみてみると256TBものストレージとしてマウントされてて、凄さを感じる
+あとで書く
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +86,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2013/07/07/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-07T09:48:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>EC2からみてみると256TBものストレージとしてマウントされてて、凄さを感じる
+あとで書く</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -581,63 +620,9 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2013/04/03/test-post/">Test Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-03T20:13:00+09:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>test</p>
-
-<p>Hello Octopress Blog World!</p>
-
-<p>テスト</p>
-
-<p><img src="http://toshikaz55.github.com/blog/images/violin.jpg" alt="violin" /></p>
-
-<p><img src="http://toshikaz55.github.com/blog/images/violin.jpg"></p>
-
-<p><img src="../../images/violin.jpg" alt="violin" /></p>
-
-<p><img src="violin.jpg" alt="violin" /></p>
-
-<p><img src="images/violin.jpg" alt="violin" /></p>
-
-<p><img src="/blog/images/violin.jpg" alt="violin" /></p>
-
-<p><img src="/blog/images/email.png" alt="violin" /></p>
-
-<p><img src="/blog/blog/images/violin.jpg" alt="violin" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/blog/archives">Blog Archives</a>
     
@@ -654,6 +639,10 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/blog/2013/07/07/aws-s3-mount-s3fs/">AWSのS3をEC2からファイルシステムとしてマウントする、s3fsを使ってみた</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/blog/2013/06/21/webrick-puma-old-ruby-path/">webrickだとgitlabが動くのにhttpd+pumaだと動かないのが、古いrubyのpathの問題だったことについて</a>
       </li>
     
@@ -667,10 +656,6 @@ marukuコマンドでHTMLファイルを生成してブラウザでみてるの�
     
       <li class="post">
         <a href="/blog/blog/2013/06/06/chef-solo-non-US-ASCII-template-problem/">Chef-solo、日本語が含まれる（非US-ASCII）テンプレートでエラーが出る問題について</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/blog/2013/06/02/chef-solo-vagrant-install/">Chef-solo、vagrantのインストールとknifeを使った各種ソフトのインストールと設定の自動化</a>
       </li>
     
   </ul>
